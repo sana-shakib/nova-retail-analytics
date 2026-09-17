@@ -1,0 +1,1043 @@
+
+/* =========================================================
+NOVA RETAIL ANALYTICS
+Minimal Enterprise Dashboard
+Responsive Edition
+========================================================= */
+
+/* =========================================================
+FONT
+========================================================= */
+
+@import url(
+'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap'
+);
+
+/* =========================================================
+GLOBAL
+========================================================= */
+
+html,
+body,
+[class*="css"] {
+    font-family:
+        "Vazirmatn",
+        "Yekan",
+        "Tahoma",
+        sans-serif;
+}
+
+.stApp {
+    background: #f5f6f8;
+    color: #20242a;
+}
+
+.main {
+    direction: rtl;
+}
+
+/* =========================================================
+REMOVE STREAMLIT DEFAULT ELEMENTS
+========================================================= */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+.block-container {
+    max-width: 1440px;
+    padding-top: 2.2rem;
+    padding-bottom: 3rem;
+}
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+section[data-testid="stSidebar"] {
+    background: #17191d;
+    border-left: 1px solid #25282e;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding: 2rem 1.25rem;
+}
+
+/* =========================================================
+DESKTOP NAVIGATION
+Hide Streamlit sidebar completely on desktop
+========================================================= */
+
+@media (min-width: 901px) {
+
+    section[data-testid="stSidebar"] {
+        display: none !important;
+    }
+
+    [data-testid="stSidebarCollapsedControl"] {
+        display: none !important;
+    }
+
+}
+
+/* =========================================================
+SIDEBAR BRAND
+========================================================= */
+
+.sidebar-brand {
+    text-align: right;
+    padding: 0.5rem 0 1.8rem;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+    color: #8f949d;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    margin-top: 0.2rem;
+}
+
+.sidebar-section-title {
+    color: #707680;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    margin: 1.4rem 0 0.8rem;
+}
+
+/* =========================================================
+SIDEBAR BUTTONS
+========================================================= */
+
+section[data-testid="stSidebar"] .stPageLink {
+    margin: 0.15rem 0;
+}
+
+section[data-testid="stSidebar"] .stPageLink a {
+    color: #c8ccd2 !important;
+    background: transparent !important;
+    border-radius: 7px;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+section[data-testid="stSidebar"] .stPageLink a:hover {
+    background: #23262c !important;
+    color: #ffffff !important;
+}
+
+.sidebar-meta {
+    color: #737983;
+    font-size: 0.72rem;
+    line-height: 1.8;
+}
+
+.sidebar-meta strong {
+    color: #b8bdc5;
+    font-weight: 500;
+}
+
+/* =========================================================
+MOBILE NAVIGATION
+========================================================= */
+
+div[data-testid="stExpander"] {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 9px;
+    margin-bottom: 1.2rem;
+    overflow: hidden;
+}
+
+div[data-testid="stExpander"] summary {
+    font-family:
+        "Vazirmatn",
+        "Yekan",
+        "Tahoma",
+        sans-serif;
+
+    color: #343940;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+div[data-testid="stExpander"] .stPageLink {
+    margin: 0.2rem 0;
+}
+
+div[data-testid="stExpander"] .stPageLink a {
+    background: #f7f8f9 !important;
+    color: #343940 !important;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.82rem;
+    transition: all 0.2s ease;
+}
+
+div[data-testid="stExpander"] .stPageLink a:hover {
+    background: #eef0f2 !important;
+    border-color: #dfe2e6;
+    color: #171a1e !important;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.top-header,
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 1.5rem;
+    border-bottom: 1px solid #dfe2e6;
+}
+
+.eyebrow {
+    color: #70757d;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+}
+
+.top-header h1,
+.page-header h1 {
+    margin: 0.4rem 0 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #181b20;
+}
+
+.english-title {
+    color: #858a92;
+    font-size: 0.82rem;
+    direction: ltr;
+    text-align: right;
+    margin-top: 0.3rem;
+}
+
+.header-status {
+    color: #5e646c;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3f8f68;
+    display: inline-block;
+}
+
+/* =========================================================
+BUSINESS PROFILE
+========================================================= */
+
+.intro-section,
+.section-block {
+    background: #ffffff;
+    border: 1px solid #e3e5e8;
+    border-radius: 10px;
+    padding: 1.6rem 1.8rem;
+    margin: 1.5rem 0;
+}
+
+.intro-label {
+    color: #777d85;
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    margin-bottom: 0.6rem;
+}
+
+.intro-section h2,
+.section-block h2 {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #20242a;
+}
+
+.intro-section p,
+.section-block p {
+    max-width: 900px;
+    color: #666c74;
+    font-size: 0.9rem;
+    line-height: 2;
+    margin: 0.8rem 0 1.4rem;
+}
+
+.business-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    border-top: 1px solid #eceef0;
+    padding-top: 1.1rem;
+}
+
+.business-meta span {
+    display: block;
+    color: #888e96;
+    font-size: 0.72rem;
+    margin-bottom: 0.25rem;
+}
+
+.business-meta strong {
+    color: #343940;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* =========================================================
+SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 1.8rem 0 1rem;
+}
+
+.section-heading h2 {
+    margin: 0;
+    color: #20242a;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.section-heading span {
+    color: #8a9098;
+    font-size: 0.72rem;
+    direction: ltr;
+}
+
+.section-space {
+    margin-top: 2.2rem;
+}
+
+/* =========================================================
+KPI CARDS
+========================================================= */
+
+.kpi-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 9px;
+    padding: 1.25rem;
+    min-height: 145px;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.kpi-card:hover {
+    border-color: #c6cbd1;
+    transform: translateY(-2px);
+}
+
+.kpi-label {
+    color: #4d535b;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.kpi-english {
+    color: #969ba2;
+    font-size: 0.68rem;
+    direction: ltr;
+    text-align: right;
+    margin-top: 0.15rem;
+}
+
+.kpi-value {
+    color: #171a1e;
+    font-size: 1.55rem;
+    font-weight: 600;
+    direction: ltr;
+    text-align: right;
+    margin-top: 1.2rem;
+}
+
+.kpi-unit {
+    color: #999ea5;
+    font-size: 0.62rem;
+    direction: ltr;
+    text-align: right;
+    margin-top: 0.2rem;
+}
+
+/* =========================================================
+MODULE CARDS
+========================================================= */
+
+.module-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 9px;
+    padding: 1.35rem;
+    min-height: 190px;
+}
+
+.module-number {
+    color: #a2a7ae;
+    font-size: 0.7rem;
+    direction: ltr;
+    margin-bottom: 1rem;
+}
+
+.module-card h3 {
+    color: #272b31;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.module-card span {
+    color: #8b9199;
+    font-size: 0.68rem;
+    direction: ltr;
+}
+
+.module-card p {
+    color: #686e76;
+    font-size: 0.78rem;
+    line-height: 1.9;
+    margin-top: 1rem;
+}
+
+/* =========================================================
+ARCHITECTURE
+========================================================= */
+
+.architecture-section {
+    margin-top: 2.5rem;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 9px;
+    padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.pipeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    color: #666c74;
+    font-size: 0.7rem;
+    direction: ltr;
+}
+
+.pipeline div:nth-child(odd) {
+    background: #f4f5f7;
+    border: 1px solid #e2e4e7;
+    border-radius: 5px;
+    padding: 0.55rem 0.75rem;
+}
+
+.pipeline div:nth-child(even) {
+    color: #a2a7ad;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    div[data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+    }
+
+    div[data-testid="stHorizontalBlock"]
+    > div[data-testid="column"] {
+        min-width: calc(50% - 0.5rem) !important;
+        flex: 1 1 calc(50% - 0.5rem) !important;
+    }
+
+    .business-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .top-header,
+    .page-header {
+        align-items: flex-start;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .block-container {
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Mobile Navigation */
+
+    div[data-testid="stExpander"] {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    div[data-testid="stExpander"] summary {
+        padding: 0.15rem 0;
+        font-size: 0.8rem;
+    }
+
+    div[data-testid="stExpander"] .stPageLink {
+        margin: 0.25rem 0;
+    }
+
+    div[data-testid="stExpander"] .stPageLink a {
+        padding: 0.72rem 0.8rem;
+        font-size: 0.78rem;
+    }
+
+    /* One Column Layout */
+
+    div[data-testid="stHorizontalBlock"] {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+    }
+
+    div[data-testid="stHorizontalBlock"]
+    > div[data-testid="column"] {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Business Profile */
+
+    .section-block,
+    .intro-section {
+        padding: 1.15rem;
+        margin: 1rem 0;
+    }
+
+    .business-meta {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    /* Header */
+
+    .page-header,
+    .top-header {
+        padding-bottom: 1.1rem;
+    }
+
+    .top-header h1,
+    .page-header h1 {
+        font-size: 1.45rem;
+        line-height: 1.6;
+    }
+
+    .eyebrow {
+        font-size: 0.62rem;
+    }
+
+    .english-title {
+        font-size: 0.72rem;
+    }
+
+    .header-status {
+        font-size: 0.68rem;
+    }
+
+    /* Section Headings */
+
+    .section-heading {
+        margin: 1.4rem 0 0.8rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1rem;
+    }
+
+    .section-heading span {
+        font-size: 0.65rem;
+    }
+
+    /* KPI */
+
+    .kpi-card {
+        min-height: 130px;
+        padding: 1.05rem;
+    }
+
+    .kpi-label {
+        font-size: 0.75rem;
+    }
+
+    .kpi-value {
+        font-size: 1.35rem;
+        margin-top: 1rem;
+    }
+
+    /* Analytics Modules */
+
+    .module-card {
+        min-height: auto;
+        padding: 1.15rem;
+    }
+
+    .module-card p {
+        font-size: 0.75rem;
+        line-height: 1.85;
+    }
+
+    /* Pipeline */
+
+    .pipeline {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5rem 0.2rem 0.8rem;
+        gap: 0.55rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+
+    .pipeline div:nth-child(odd) {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 0.5rem 0.65rem;
+        font-size: 0.65rem;
+    }
+
+    .pipeline div:nth-child(even) {
+        flex: 0 0 auto;
+    }
+
+    /* Footer */
+
+    .footer {
+        margin-top: 2rem;
+        font-size: 0.6rem;
+        line-height: 1.7;
+    }
+}
+
+/* =========================================================
+VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .block-container {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+
+    .kpi-card {
+        padding: 0.95rem;
+    }
+
+    .kpi-value {
+        font-size: 1.2rem;
+    }
+
+    .section-heading h2 {
+        font-size: 0.95rem;
+    }
+
+    div[data-testid="stExpander"] summary {
+        font-size: 0.76rem;
+    }
+
+    div[data-testid="stExpander"] .stPageLink a {
+        font-size: 0.74rem;
+        padding: 0.65rem 0.7rem;
+    }
+}
+
+/* =========================================================
+STREAMLIT ELEMENTS
+========================================================= */
+
+div[data-testid="stMarkdownContainer"] p {
+    margin-bottom: 0;
+}
+
+.stDivider {
+    border-color: #e1e3e6 !important;
+}
+
+button[data-testid="baseButton-secondary"] {
+    border-radius: 6px;
+}
+/* ===== NAVY TEXT COLOR ===== */
+
+body,
+.stApp,
+.main,
+.block-container,
+p,
+span,
+label,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #172033;
+}
+
+/* Streamlit text elements */
+[data-testid="stMarkdownContainer"] p,
+[data-testid="stMarkdownContainer"] span {
+    color: #172033;
+}
+
+/* Input labels */
+.stTextInput label,
+.stNumberInput label,
+.stSelectbox label,
+.stMultiSelect label,
+.stDateInput label {
+    color: #172033 !important;
+}
+/* ===== PROFESSIONAL KPI CARDS ===== */
+
+[data-testid="stMetric"] {
+    background: #ffffff;
+    border: 1px solid #e5e8ee;
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 3px 12px rgba(23, 32, 51, 0.06);
+    transition: all 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    box-shadow: 0 6px 18px rgba(23, 32, 51, 0.10);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #667085 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #172033 !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 13px !important;
+}
+/* ===== PROFESSIONAL HEADINGS ===== */
+
+h1 {
+    color: #172033 !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px !important;
+}
+
+h2 {
+    color: #172033 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-top: 24px !important;
+    margin-bottom: 12px !important;
+}
+
+h3 {
+    color: #172033 !important;
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    margin-top: 18px !important;
+}
+
+[data-testid="stMarkdownContainer"] h1,
+[data-testid="stMarkdownContainer"] h2,
+[data-testid="stMarkdownContainer"] h3 {
+    color: #172033 !important;
+}
+/* ===== PROFESSIONAL DATA TABLES ===== */
+
+[data-testid="stDataFrame"] {
+    border: 1px solid #e3e7ed;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(23, 32, 51, 0.05);
+    background: #ffffff;
+}
+
+/* Table container */
+[data-testid="stDataFrame"] > div {
+    border-radius: 12px;
+}
+
+/* Data editor / dataframe text */
+[data-testid="stDataFrame"] * {
+    font-family: Vazirmatn, Yekan, Tahoma, sans-serif;
+}
+
+/* Table toolbar */
+[data-testid="stDataFrame"] button {
+    color: #172033 !important;
+}
+
+/* Empty dataframe message */
+[data-testid="stDataFrame"] p {
+    color: #172033 !important;
+}
+/* ===== PROFESSIONAL CHART CONTAINERS ===== */
+
+[data-testid="stPlotlyChart"],
+[data-testid="stVegaLiteChart"],
+[data-testid="stArrowVegaLiteChart"] {
+    background: #ffffff;
+    border: 1px solid #e5e8ee;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: 0 3px 12px rgba(23, 32, 51, 0.05);
+    margin-bottom: 20px;
+}
+
+/* Chart titles */
+[data-testid="stPlotlyChart"] text {
+    font-family: Vazirmatn, Yekan, Tahoma, sans-serif !important;
+}
+/* ===== PROFESSIONAL FILTERS & INPUTS ===== */
+
+[data-testid="stSelectbox"],
+[data-testid="stMultiSelect"],
+[data-testid="stDateInput"],
+[data-testid="stTextInput"],
+[data-testid="stNumberInput"] {
+    margin-bottom: 12px;
+}
+
+/* Input containers */
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div,
+[data-baseweb="base-input"] {
+    background-color: #ffffff !important;
+    border: 1px solid #dfe3e8 !important;
+    border-radius: 10px !important;
+    color: #172033 !important;
+    min-height: 42px;
+}
+
+/* Input text */
+[data-baseweb="select"] *,
+[data-baseweb="input"] *,
+[data-baseweb="base-input"] * {
+    color: #172033 !important;
+}
+
+/* Focus state */
+[data-baseweb="select"] > div:focus-within,
+[data-baseweb="input"] > div:focus-within,
+[data-baseweb="base-input"]:focus-within {
+    border-color: #172033 !important;
+    box-shadow: 0 0 0 1px #172033 !important;
+}
+
+/* Filter labels */
+[data-testid="stSelectbox"] label,
+[data-testid="stMultiSelect"] label,
+[data-testid="stDateInput"] label,
+[data-testid="stTextInput"] label,
+[data-testid="stNumberInput"] label {
+    color: #172033 !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+/* ===== PROFESSIONAL BUTTONS ===== */
+
+.stButton > button {
+    background: #172033 !important;
+    color: #ffffff !important;
+    border: 1px solid #172033 !important;
+    border-radius: 9px !important;
+    padding: 8px 20px !important;
+    font-family: Vazirmatn, Yekan, Tahoma, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    min-height: 40px;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.stButton > button:hover {
+    background: #26334d !important;
+    border-color: #26334d !important;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(23, 32, 51, 0.15);
+}
+
+/* Active */
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* Disabled */
+.stButton > button:disabled {
+    background: #e9ecf1 !important;
+    color: #8a93a3 !important;
+    border-color: #e9ecf1 !important;
+    box-shadow: none;
+}
+/* ===== PROFESSIONAL DASHBOARD SPACING ===== */
+
+.block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+}
+
+/* Space between Streamlit blocks */
+.element-container {
+    margin-bottom: 0.35rem;
+}
+
+/* Section spacing */
+[data-testid="stVerticalBlock"] {
+    gap: 0.6rem;
+}
+
+/* Columns spacing */
+[data-testid="stHorizontalBlock"] {
+    gap: 1.2rem;
+}
+
+/* Horizontal divider */
+hr {
+    border: none !important;
+    border-top: 1px solid #e5e8ee !important;
+    margin: 24px 0 !important;
+}
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+
+    /* Main content */
+    .block-container {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    h3 {
+        font-size: 17px !important;
+    }
+
+    /* KPI cards */
+    [data-testid="stMetric"] {
+        padding: 15px 16px;
+        border-radius: 12px;
+    }
+
+    [data-testid="stMetricValue"] {
+        font-size: 23px !important;
+    }
+
+    [data-testid="stMetricLabel"] {
+        font-size: 12px !important;
+    }
+
+    /* Columns */
+    [data-testid="stHorizontalBlock"] {
+        flex-direction: column !important;
+        gap: 0.7rem !important;
+    }
+
+    [data-testid="column"] {
+        width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Charts */
+    [data-testid="stPlotlyChart"],
+    [data-testid="stVegaLiteChart"],
+    [data-testid="stArrowVegaLiteChart"] {
+        width: 100% !important;
+        padding: 4px;
+        border-radius: 10px;
+    }
+
+    /* Buttons */
+    .stButton > button {
+        width: 100% !important;
+        min-height: 42px;
+    }
+
+    /* Inputs */
+    [data-testid="stSelectbox"],
+    [data-testid="stMultiSelect"],
+    [data-testid="stDateInput"],
+    [data-testid="stTextInput"],
+    [data-testid="stNumberInput"] {
+        width: 100% !important;
+    }
+
+    /* Prevent horizontal overflow */
+    html,
+    body,
+    .stApp {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Tables */
+    [data-testid="stDataFrame"] {
+        max-width: 100% !important;
+        border-radius: 10px;
+    }
+}

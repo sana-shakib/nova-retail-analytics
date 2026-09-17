@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Database / backups
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
+*.bak
+backups/
+databasenova
+
+# Logs
+*.log
+
+# OS / IDE
+desktop.ini
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary / test artifacts
+*.tmp
+*.temp
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML model artifacts
+*.pkl
+*.joblib
+
+# Generated / local artifacts
+*.html
+*.js.download
+*_files/
+output*.png
+Code_*.png
+8T74hIdrBe.png
+# Local analysis outputs - not needed for Streamlit deployment
+07_Python_Analysis/outputs/
+07_Python_Analysis/*.ipynb
+connection.ipynb
+
+# Local development / test files
+dashboard/test_*.py
+dashboard/services/test_*.py
+# Generated datasets not required by dashboard
+03_Data_Generation/customers.csv
+03_Data_Generation/customer_feedback.csv
+03_Data_Generation/inventory.csv
+03_Data_Generation/orders.csv
+03_Data_Generation/order_details.csv
+03_Data_Generation/payments.csv
+
+# Local database loading scripts
+04_Data_Loading/
+
+# Legacy local script
+python databasenova.py

@@ -1,4 +1,3 @@
-http://10.145.120.214:8502
 
 # Nova Retail Analytics
 

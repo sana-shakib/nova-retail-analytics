@@ -1,3 +1,5 @@
+http://10.145.120.214:8502
+
 # Nova Retail Analytics
 
 ## End-to-End Data Analytics and Machine Learning Case Study
